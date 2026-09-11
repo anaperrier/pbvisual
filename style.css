@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 :root {
     --blue: #01325D;
     --orange: #F79633;
@@ -12,24 +13,33 @@
     --gray: #77756e;
     --line: #d3d0c7;
 }
+
 html {
     scroll-behavior: smooth;
 }
+
 body {
     font-family: "DM Sans", sans-serif;
     background: var(--white);
     color: var(--black);
     overflow-x: hidden;
 }
+
 a {
     color: inherit;
     text-decoration: none;
 }
+
 .container {
     width: min(1180px, 90%);
     margin: 0 auto;
 }
-/* HEADER */
+
+
+/* =========================
+   HEADER
+========================= */
+
 .header {
     position: fixed;
     top: 0;
@@ -40,6 +50,7 @@ a {
     backdrop-filter: blur(15px);
     border-bottom: 1px solid rgba(1, 50, 93, 0.12);
 }
+
 .header-inner {
     width: min(1320px, 92%);
     height: 86px;
@@ -48,12 +59,16 @@ a {
     align-items: center;
     justify-content: space-between;
 }
-/* LOGO PB COMUNICAÇÃO VISUAL */
+
+
+/* LOGO */
+
 .logo {
     display: flex;
     align-items: center;
     gap: 11px;
 }
+
 .logo-pb {
     display: flex;
     align-items: center;
@@ -63,14 +78,17 @@ a {
     line-height: 1;
     letter-spacing: -5px;
 }
+
 .logo-pb .p {
     color: var(--blue);
     position: relative;
     top: -3px;
 }
+
 .logo-pb .b {
     color: var(--orange);
 }
+
 .logo-text {
     color: var(--blue);
     font-family: "DM Sans", sans-serif;
@@ -79,21 +97,27 @@ a {
     line-height: 1.25;
     letter-spacing: 1.8px;
 }
+
+
 /* NAV */
+
 .nav {
     display: flex;
     gap: 35px;
     margin-left: auto;
     margin-right: 45px;
 }
+
 .nav a {
     font-size: 12px;
     font-weight: 600;
     transition: color 0.2s ease;
 }
+
 .nav a:hover {
     color: var(--orange);
 }
+
 .header-button {
     background: var(--blue);
     color: white;
@@ -102,11 +126,15 @@ a {
     font-weight: 700;
     transition: all 0.2s ease;
 }
+
 .header-button:hover {
     background: var(--orange);
     transform: translateY(-2px);
 }
+
+
 /* MENU MOBILE */
+
 .menu-toggle {
     display: none;
     border: none;
@@ -115,6 +143,7 @@ a {
     height: 35px;
     cursor: pointer;
 }
+
 .menu-toggle span {
     display: block;
     width: 25px;
@@ -122,12 +151,18 @@ a {
     background: var(--blue);
     margin: 6px auto;
 }
-/* HERO */
+
+
+/* =========================
+   HERO
+========================= */
+
 .hero {
     min-height: 100vh;
     padding-top: 86px;
     background: var(--white);
 }
+
 .hero-grid {
     width: min(1320px, 92%);
     min-height: calc(100vh - 86px);
@@ -135,12 +170,14 @@ a {
     display: grid;
     grid-template-columns: 1fr 0.95fr;
 }
+
 .hero-content {
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 90px 70px 90px 0;
 }
+
 .hero-tag {
     display: flex;
     align-items: center;
@@ -151,12 +188,14 @@ a {
     margin-bottom: 35px;
     color: var(--blue);
 }
+
 .hero-tag::before {
     content: "";
     width: 30px;
     height: 2px;
     background: var(--orange);
 }
+
 .hero h1 {
     font-family: "Manrope", sans-serif;
     font-size: clamp(60px, 7vw, 105px);
@@ -165,6 +204,7 @@ a {
     font-weight: 800;
     color: var(--blue);
 }
+
 .hero h1 em {
     display: block;
     font-family: Georgia, serif;
@@ -173,6 +213,7 @@ a {
     letter-spacing: -5px;
     color: var(--orange);
 }
+
 .hero-description {
     max-width: 510px;
     margin-top: 38px;
@@ -180,12 +221,14 @@ a {
     line-height: 1.7;
     color: var(--gray);
 }
+
 .hero-buttons {
     display: flex;
     align-items: center;
     gap: 28px;
     margin-top: 38px;
 }
+
 .btn {
     display: inline-flex;
     align-items: center;
@@ -197,54 +240,70 @@ a {
     letter-spacing: 1px;
     transition: all 0.25s ease;
 }
+
 .btn-primary {
     background: var(--blue);
     color: white;
 }
+
 .btn-primary:hover {
     background: var(--orange);
     transform: translateY(-3px);
 }
+
 .btn-outline {
     border-bottom: 1px solid var(--blue);
     color: var(--blue);
 }
+
 .btn-outline:hover {
     color: var(--orange);
     border-color: var(--orange);
 }
+
+
 /* HERO INFO */
+
 .hero-info {
     display: flex;
     gap: 55px;
     margin-top: 70px;
 }
+
 .hero-info span {
     color: var(--gray);
     font-size: 10px;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
+
 .hero-info span:first-child {
     color: var(--blue);
     font-weight: 700;
 }
-/* HERO VISUAL */
+
+
+/* =========================
+   HERO VISUAL / CATÁLOGO
+========================= */
+
 .hero-visual {
     position: relative;
     background: var(--blue);
     min-height: 650px;
     overflow: hidden;
 }
+
 .hero-visual::before {
     content: "";
     position: absolute;
     inset: 55px;
     border: 1px solid rgba(255, 255, 255, 0.25);
+    z-index: 1;
 }
-.hero-visual::after {
-    content: none;
-}
+
+
+/* PB GRANDE */
 
 .hero-pb {
     position: absolute;
@@ -256,12 +315,19 @@ a {
     font-weight: 800;
     letter-spacing: -10px;
     color: white;
+    z-index: 2;
+    white-space: nowrap;
+    pointer-events: none;
 }
 
 .hero-pb .p {
     position: relative;
     top: -3px;
 }
+
+
+/* LINHAS DO CATÁLOGO */
+
 .visual-main {
     position: absolute;
     right: 0;
@@ -277,7 +343,9 @@ a {
     );
     opacity: 0.8;
     transform: skewX(-10deg);
+    z-index: 3;
 }
+
 .visual-main::after {
     content: "";
     position: absolute;
@@ -290,6 +358,10 @@ a {
         rgba(1, 50, 93, 0.7) 36px
     );
 }
+
+
+/* TEXTO PEQUENO */
+
 .visual-small {
     position: absolute;
     left: 65px;
@@ -299,8 +371,14 @@ a {
     font-weight: 700;
     letter-spacing: 5px;
     line-height: 1.5;
+    z-index: 4;
 }
-/* MARQUEE */
+
+
+/* =========================
+   MARQUEE
+========================= */
+
 .marquee {
     background: var(--blue);
     color: white;
@@ -308,6 +386,7 @@ a {
     border-top: 1px solid rgba(255, 255, 255, 0.15);
     border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
+
 .marquee-content {
     min-width: max-content;
     height: 90px;
@@ -317,28 +396,38 @@ a {
     padding: 0 30px;
     animation: marquee 22s linear infinite;
 }
+
 .marquee-content span {
     font-family: "Manrope", sans-serif;
     font-size: 24px;
     font-weight: 800;
     letter-spacing: -1px;
 }
+
 .marquee-content span:nth-child(even) {
     color: var(--orange);
     font-size: 18px;
 }
+
 @keyframes marquee {
     from {
         transform: translateX(0);
     }
+
     to {
         transform: translateX(-25%);
     }
 }
-/* SEÇÕES */
+
+
+/* =========================
+   SEÇÕES
+========================= */
+
 .section {
     padding: 150px 0;
 }
+
 .section-label {
     display: flex;
     align-items: center;
@@ -349,15 +438,22 @@ a {
     margin-bottom: 55px;
     color: var(--blue);
 }
-/* A PB VISUAL */
+
+
+/* =========================
+   A PB VISUAL
+========================= */
+
 .about {
     background: var(--cream);
 }
+
 .about-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 100px;
 }
+
 .about-title h2 {
     font-family: "Manrope", sans-serif;
     font-size: clamp(43px, 5vw, 70px);
@@ -366,6 +462,7 @@ a {
     font-weight: 700;
     color: var(--blue);
 }
+
 .about-title h2 em {
     display: block;
     font-family: Georgia, serif;
@@ -374,10 +471,11 @@ a {
     letter-spacing: -3px;
     color: var(--orange);
 }
-/* OS 3 PARÁGRAFOS FICAM IGUAIS */
+
 .about-text {
     padding-top: 10px;
 }
+
 .about-text p {
     max-width: 540px;
     color: #68665f;
@@ -387,7 +485,10 @@ a {
     line-height: 1.8;
     margin-bottom: 25px;
 }
+
+
 /* ASSINATURA */
+
 .about-signature {
     display: flex;
     align-items: center;
@@ -399,28 +500,38 @@ a {
     font-weight: 800;
     letter-spacing: 2px;
 }
+
 .about-signature span {
     width: 35px;
     height: 2px;
     background: var(--orange);
 }
-/* NÚMEROS */
+
+
+/* =========================
+   NÚMEROS
+========================= */
+
 .numbers {
     background: var(--blue);
     color: white;
 }
+
 .numbers-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
 }
+
 .number-item {
     min-height: 220px;
     padding: 50px 30px;
     border-right: 1px solid rgba(255, 255, 255, 0.18);
 }
+
 .number-item:first-child {
     border-left: 1px solid rgba(255, 255, 255, 0.18);
 }
+
 .number-item strong {
     font-family: "Manrope", sans-serif;
     font-size: 65px;
@@ -428,9 +539,11 @@ a {
     letter-spacing: -5px;
     font-weight: 800;
 }
+
 .number-item strong span {
     color: var(--orange);
 }
+
 .number-item small {
     display: block;
     margin-top: 25px;
@@ -439,14 +552,21 @@ a {
     text-transform: uppercase;
     letter-spacing: 1.5px;
 }
-/* SERVIÇOS */
+
+
+/* =========================
+   SERVIÇOS
+========================= */
+
 .services {
     background: var(--white);
 }
+
 .section-heading {
     max-width: 800px;
     margin-bottom: 80px;
 }
+
 .section-heading h2 {
     font-family: "Manrope", sans-serif;
     font-size: clamp(43px, 5vw, 70px);
@@ -455,6 +575,7 @@ a {
     font-weight: 700;
     color: var(--blue);
 }
+
 .section-heading h2 em {
     display: block;
     font-family: Georgia, serif;
@@ -463,10 +584,11 @@ a {
     letter-spacing: -3px;
     color: var(--orange);
 }
+
 .services-list {
     border-top: 1px solid var(--blue);
 }
-/* EFEITO AO PASSAR O MOUSE */
+
 .service-item {
     display: grid;
     grid-template-columns: 90px 1fr 80px;
@@ -478,34 +600,42 @@ a {
         padding 0.3s ease,
         background 0.3s ease;
 }
+
 .service-item:hover {
     padding-left: 20px;
     padding-right: 20px;
     background: var(--cream);
 }
+
 .service-number {
     font-size: 10px;
     font-weight: 800;
     color: var(--orange);
 }
+
 .service-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
     gap: 30px;
 }
+
 .service-content h3 {
     font-family: "Manrope", sans-serif;
     font-size: 28px;
     letter-spacing: -1.5px;
     color: var(--blue);
 }
+
 .service-content p {
     color: var(--gray);
     font-size: 13px;
     line-height: 1.6;
 }
-/* SETINHA */
+
+
+/* SETA */
+
 .service-arrow {
     width: 48px;
     height: 48px;
@@ -521,22 +651,30 @@ a {
         all 0.25s ease,
         transform 0.25s ease;
 }
+
 .service-item:hover .service-arrow {
     background: var(--orange);
     border-color: var(--orange);
     color: white;
     transform: rotate(45deg);
 }
-/* PROJETOS */
+
+
+/* =========================
+   PROJETOS
+========================= */
+
 .projects {
     background: var(--cream);
 }
+
 .projects-header {
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
     margin-bottom: 80px;
 }
+
 .projects-header h2 {
     font-family: "Manrope", sans-serif;
     font-size: clamp(43px, 5vw, 70px);
@@ -545,6 +683,7 @@ a {
     font-weight: 700;
     color: var(--blue);
 }
+
 .projects-header h2 em {
     display: block;
     font-family: Georgia, serif;
@@ -553,26 +692,31 @@ a {
     letter-spacing: -3px;
     color: var(--orange);
 }
+
 .projects-header p {
     width: 280px;
     color: var(--gray);
     font-size: 13px;
     line-height: 1.7;
 }
+
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 25px;
 }
+
 .project-card {
     margin-bottom: 0;
 }
+
 .project-image {
     position: relative;
     width: 100%;
     height: 330px;
     overflow: hidden;
 }
+
 .project-image img {
     width: 100%;
     height: 100%;
@@ -580,9 +724,11 @@ a {
     display: block;
     transition: transform 0.5s ease;
 }
+
 .project-card:hover .project-image img {
     transform: scale(1.04);
 }
+
 .project-info {
     display: flex;
     align-items: center;
@@ -591,23 +737,32 @@ a {
     padding: 18px 0;
     border-bottom: 1px solid #bbb8b0;
 }
+
 .project-info h3 {
     font-size: 13px;
     color: var(--blue);
 }
+
 .project-info span {
     color: var(--orange);
     font-size: 10px;
 }
-/* CLIENTES */
+
+
+/* =========================
+   CLIENTES
+========================= */
+
 .clients {
     background: var(--white);
 }
+
 .clients-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 25px;
 }
+
 .client-logo {
     width: 100%;
     height: 150px;
@@ -619,18 +774,25 @@ a {
     padding: 20px;
     overflow: hidden;
 }
+
 .client-logo img {
     width: 100%;
     height: 100%;
     object-fit: contain;
     display: block;
 }
-/* CTA */
+
+
+/* =========================
+   CTA
+========================= */
+
 .cta {
     background: var(--blue);
     color: white;
     padding: 150px 0;
 }
+
 .cta h2 {
     max-width: 900px;
     font-family: "Manrope", sans-serif;
@@ -639,6 +801,7 @@ a {
     letter-spacing: -6px;
     margin-bottom: 60px;
 }
+
 .cta h2 em {
     display: block;
     font-family: Georgia, serif;
@@ -646,24 +809,33 @@ a {
     font-style: italic;
     color: var(--orange);
 }
+
 .btn-light {
     background: var(--orange);
     color: white;
 }
+
 .btn-light:hover {
     transform: translateY(-3px);
     background: white;
     color: var(--blue);
 }
-/* CONTATO */
+
+
+/* =========================
+   CONTATO
+========================= */
+
 .contact {
     background: var(--white);
 }
+
 .contact-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 130px;
 }
+
 .contact-grid h2 {
     max-width: 650px;
     font-family: "Manrope", sans-serif;
@@ -673,19 +845,23 @@ a {
     font-weight: 700;
     color: var(--blue);
 }
+
 .contact-grid h2 em {
     font-family: Georgia, serif;
     font-weight: 400;
     font-style: italic;
     color: var(--orange);
 }
+
 .contact-info {
     border-top: 1px solid var(--blue);
 }
+
 .contact-item {
     padding: 27px 0;
     border-bottom: 1px solid var(--line);
 }
+
 .contact-item > span {
     display: block;
     font-size: 9px;
@@ -694,6 +870,7 @@ a {
     margin-bottom: 12px;
     color: var(--orange);
 }
+
 .contact-item a {
     display: inline-flex;
     flex-direction: column;
@@ -701,14 +878,21 @@ a {
     line-height: 1.6;
     color: var(--blue);
 }
+
 .contact-item a:hover {
     text-decoration: underline;
 }
-/* FOOTER */
+
+
+/* =========================
+   FOOTER
+========================= */
+
 .footer {
     background: var(--blue);
     color: white;
 }
+
 .footer-inner {
     min-height: 190px;
     width: min(1180px, 90%);
@@ -718,12 +902,14 @@ a {
     align-items: center;
     gap: 40px;
 }
+
 .footer-logo {
     display: flex;
     align-items: center;
     gap: 12px;
     min-width: 0;
 }
+
 .footer-logo .logo-pb {
     display: flex;
     align-items: center;
@@ -737,32 +923,42 @@ a {
     letter-spacing: -5px;
     flex-shrink: 0;
 }
+
 .footer-logo .logo-pb .p {
     display: inline-block;
     color: var(--white);
     position: relative;
     top: -3px;
 }
+
 .footer-logo .logo-pb .b {
     display: inline-block;
     color: var(--orange);
 }
+
 .footer-logo .logo-text {
     color: white;
     max-width: 140px;
 }
+
 .footer-inner p {
     color: rgba(255, 255, 255, 0.55);
     font-size: 10px;
     max-width: 250px;
 }
+
 .footer-inner > span {
     color: rgba(255, 255, 255, 0.45);
     font-size: 9px;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
-/* VOLTAR AO TOPO */
+
+
+/* =========================
+   VOLTAR AO TOPO
+========================= */
+
 .back-to-top {
     position: fixed;
     right: 30px;
@@ -792,32 +988,77 @@ a {
         border-color 0.3s ease;
     z-index: 999;
 }
+
 .back-to-top.show {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
 }
+
 .back-to-top-arrow {
     font-size: 20px;
     line-height: 1;
     transition: transform 0.3s ease;
 }
+
 .back-to-top:hover {
     background: var(--blue);
     border-color: var(--blue);
     transform: translateY(-3px);
 }
+
 .back-to-top:hover .back-to-top-arrow {
     transform: translateY(-3px);
 }
-/* TABLET */
+
+
+/* =========================
+   BOTÃO CATÁLOGO
+========================= */
+
+.materials-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 45px;
+    margin-bottom: 10px;
+}
+
+.materials-button .btn {
+    display: inline-flex;
+}
+
+
+/* =========================
+   WHATSAPP
+========================= */
+
+.whatsapp-icon {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 8px;
+}
+
+.whatsapp-icon svg {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
 @media (max-width: 900px) {
+
     .header-button {
         display: none;
     }
+
     .menu-toggle {
         display: block;
     }
+
     .nav {
         position: absolute;
         top: 86px;
@@ -831,125 +1072,218 @@ a {
         background: var(--white);
         border-bottom: 1px solid var(--line);
     }
+
     .nav.active {
         display: flex;
     }
+
     .nav a {
         padding: 16px 0;
         border-bottom: 1px solid var(--line);
     }
+
     .hero-grid {
         grid-template-columns: 1fr;
     }
+
     .hero-content {
         padding: 100px 0 70px;
     }
+
     .hero-visual {
         min-height: 600px;
     }
+
     .about-grid,
     .contact-grid {
         grid-template-columns: 1fr;
         gap: 70px;
     }
+
     .numbers-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+
     .number-item {
         border-bottom: 1px solid rgba(255, 255, 255, 0.18);
     }
+
     .number-item:nth-child(odd) {
         border-left: 1px solid rgba(255, 255, 255, 0.18);
     }
+
     .service-content {
         grid-template-columns: 1fr;
     }
+
     .projects-header {
         display: block;
     }
+
     .projects-header p {
         margin-top: 30px;
     }
+
     .projects-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+
     .clients-grid {
         grid-template-columns: repeat(3, 1fr);
     }
+
     .footer-inner {
         grid-template-columns: 1fr 1fr;
         gap: 30px;
         padding: 45px 0;
     }
+
+    /* Ajuste do catálogo no tablet */
+    .hero-pb {
+        left: 30px;
+        font-size: 90px;
+        letter-spacing: -8px;
+    }
+
+    .visual-main {
+        width: 60%;
+    }
 }
-/* CELULAR */
+
+
+/* =========================
+   CELULAR
+========================= */
+
 @media (max-width: 600px) {
+
     .header-inner {
         height: 72px;
     }
+
     .nav {
         top: 72px;
     }
+
     .logo {
         gap: 8px;
     }
+
     .logo-pb {
         font-size: 30px;
     }
+
     .logo-text {
         font-size: 7px;
         letter-spacing: 1.3px;
     }
+
+
+    /* HERO */
+
     .hero {
         padding-top: 72px;
     }
+
     .hero-grid {
         width: 90%;
     }
+
     .hero-content {
         padding: 75px 0 60px;
     }
+
     .hero h1 {
         font-size: 57px;
         letter-spacing: -4px;
     }
+
     .hero h1 em {
         letter-spacing: -3px;
     }
+
     .hero-description {
         font-size: 14px;
     }
+
     .hero-buttons {
         align-items: flex-start;
         flex-direction: column;
     }
+
     .hero-info {
         margin-top: 50px;
         gap: 25px;
         flex-wrap: wrap;
     }
+
+
+    /* CATÁLOGO MOBILE */
+
     .hero-visual {
         min-height: 500px;
+        position: relative;
     }
+
     .hero-visual::before {
         inset: 25px;
     }
-    .hero-visual::after {
-        left: 25px;
-        font-size: 75px;
+
+    /*
+       PB menor no celular e separado
+       das linhas do catálogo.
+    */
+
+    .hero-pb {
+        left: 22px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 72px;
+        letter-spacing: -7px;
+        z-index: 2;
+        white-space: nowrap;
     }
+
+    /*
+       As linhas ficam em uma camada
+       própria, sem deslocar o PB.
+    */
+
+    .visual-main {
+        right: -10px;
+        bottom: 0;
+        width: 58%;
+        height: 72%;
+        transform: skewX(-10deg);
+        z-index: 3;
+    }
+
+    .visual-main::after {
+        inset: 20px;
+    }
+
     .visual-small {
         left: 27px;
         top: calc(50% + 70px);
         font-size: 8px;
         letter-spacing: 3px;
+        z-index: 4;
     }
+
+
+    /* SEÇÕES */
+
     .section {
         padding: 90px 0;
     }
+
     .section-label {
         margin-bottom: 35px;
     }
+
+
+    /* TÍTULOS */
+
     .about-title h2,
     .section-heading h2,
     .projects-header h2,
@@ -957,80 +1291,125 @@ a {
         font-size: 45px;
         letter-spacing: -3px;
     }
+
+
+    /* SOBRE */
+
     .about-text p {
         font-size: 14px;
         line-height: 1.8;
     }
+
+
+    /* NÚMEROS */
+
     .numbers-grid {
         grid-template-columns: 1fr 1fr;
     }
+
     .number-item {
         min-height: 170px;
         padding: 35px 20px;
     }
+
     .number-item strong {
         font-size: 45px;
     }
+
     .number-item small {
         font-size: 8px;
         line-height: 1.4;
     }
+
+
+    /* SERVIÇOS */
+
     .service-item {
         grid-template-columns: 35px 1fr;
         gap: 15px;
     }
+
     .service-content {
         display: block;
     }
+
     .service-content h3 {
         font-size: 22px;
         margin-bottom: 10px;
     }
+
     .service-content p {
         font-size: 12px;
     }
+
     .service-arrow {
         display: none;
     }
+
+
+    /* PROJETOS */
+
     .projects-grid {
         grid-template-columns: 1fr;
     }
+
     .project-image {
         height: 300px;
     }
+
     .project-image img {
         height: 100%;
         min-height: 0;
     }
+
     .project-info {
         flex-direction: column;
         align-items: flex-start;
     }
+
+
+    /* CLIENTES */
+
     .clients-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 15px;
     }
+
     .client-logo {
         height: 110px;
         padding: 15px;
     }
+
+
+    /* CTA */
+
     .cta {
         padding: 100px 0;
     }
+
     .cta h2 {
         font-size: 54px;
         letter-spacing: -4px;
     }
+
+
+    /* FOOTER */
+
     .footer-inner {
         grid-template-columns: 1fr;
         padding: 45px 0;
         gap: 25px;
     }
+
     .footer-logo .logo-pb {
         width: 58px;
         min-width: 58px;
         font-size: 40px;
     }
+
+
+    /* VOLTAR AO TOPO */
+
     .back-to-top {
         right: 20px;
         bottom: 20px;
@@ -1038,28 +1417,21 @@ a {
         padding: 0 15px;
         font-size: 12px;
     }
+
     .back-to-top-arrow {
         font-size: 18px;
     }
-}
-.materials-button {
-    display: flex;
-    justify-content: center;
-    margin-top: 45px;
-    margin-bottom: 10px;
-}
 
-.materials-button .btn {
-    display: inline-flex;
-}
-.whatsapp-icon {
-    display: inline-flex;
-    align-items: center;
-    margin-right: 8px;
-}
 
-.whatsapp-icon svg {
-    width: 18px;
-    height: 18px;
-    fill: currentColor;
+    /* BOTÃO CATÁLOGO */
+
+    .materials-button {
+        margin-top: 35px;
+        margin-bottom: 5px;
+    }
+
+    .materials-button .btn {
+        width: 100%;
+        max-width: 320px;
+    }
 }
