@@ -1,0 +1,1117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link rel="icon" type="image/png" href="./images/logo-pb-03.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Materiais | PB Comunicação Visual</title>
+<meta
+    name="description"
+    content="Conheça os materiais e soluções produzidos pela PB Comunicação Visual."
+>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    :root {
+        --blue: #01325D;
+        --orange: #F79633;
+        --black: #101010;
+        --white: #f7f6f2;
+        --cream: #eeece5;
+        --gray: #77756e;
+        --line: #d3d0c7;
+    }
+    html {
+        scroll-behavior: smooth;
+    }
+    body {
+        font-family: "DM Sans", sans-serif;
+        background: var(--white);
+        color: var(--black);
+        overflow-x: hidden;
+    }
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+    .container {
+        width: min(1180px, 90%);
+        margin: 0 auto;
+    }
+    /* CABEÇALHO */
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 86px;
+        z-index: 1000;
+        background: rgba(247, 246, 242, 0.95);
+        backdrop-filter: blur(15px);
+        border-bottom: 1px solid rgba(1, 50, 93, 0.12);
+    }
+    .header-inner {
+        width: min(1320px, 92%);
+        height: 100%;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 11px;
+    }
+    .logo-pb {
+        display: flex;
+        align-items: center;
+        font-family: "Manrope", sans-serif;
+        font-size: 35px;
+        font-weight: 800;
+        line-height: 1;
+        letter-spacing: -5px;
+    }
+   .logo-pb .p {
+    color: var(--blue);
+    position: relative;
+    top: -3px;
+}
+    .logo-pb .b {
+        color: var(--orange);
+    }
+    .logo-text {
+        color: var(--blue);
+        font-size: 8px;
+        font-weight: 800;
+        line-height: 1.25;
+        letter-spacing: 1.8px;
+    }
+    .back-services {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 13px 20px;
+        background: var(--blue);
+        color: white;
+        font-size: 10px;
+        font-weight: 800;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        transition: all 0.25s ease;
+    }
+    .back-services:hover {
+        background: var(--orange);
+        transform: translateY(-2px);
+    }
+    /* HERO */
+    .materials-hero {
+        min-height: 620px;
+        padding: 185px 0 110px;
+        background: var(--blue);
+        color: white;
+        position: relative;
+        overflow: hidden;
+    }
+    .materials-hero::before {
+        content: "PB";
+        position: absolute;
+        right: -35px;
+        bottom: -100px;
+        font-family: "Manrope", sans-serif;
+        font-size: 360px;
+        font-weight: 800;
+        line-height: 1;
+        letter-spacing: -30px;
+        color: rgba(255, 255, 255, 0.035);
+    }
+    .materials-hero::after {
+        content: "";
+        position: absolute;
+        width: 260px;
+        height: 260px;
+        right: 13%;
+        top: 18%;
+        border: 1px solid rgba(247, 150, 51, 0.35);
+        transform: rotate(45deg);
+    }
+    .hero-label {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        color: var(--orange);
+        font-size: 10px;
+        font-weight: 800;
+        letter-spacing: 3px;
+        margin-bottom: 35px;
+    }
+    .hero-label::before {
+        content: "";
+        width: 38px;
+        height: 2px;
+        background: var(--orange);
+    }
+    .materials-hero h1 {
+        position: relative;
+        z-index: 2;
+        max-width: 900px;
+        font-family: "Manrope", sans-serif;
+        font-size: clamp(55px, 8vw, 105px);
+        line-height: 0.9;
+        letter-spacing: -7px;
+        font-weight: 800;
+    }
+    .materials-hero h1 em {
+        display: block;
+        font-family: Georgia, serif;
+        font-weight: 400;
+        font-style: italic;
+        color: var(--orange);
+        letter-spacing: -5px;
+    }
+    .hero-description {
+        position: relative;
+        z-index: 2;
+        max-width: 570px;
+        margin-top: 40px;
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 15px;
+        line-height: 1.8;
+    }
+    .hero-line {
+        width: 100%;
+        height: 1px;
+        margin-top: 70px;
+        background: rgba(255, 255, 255, 0.15);
+        position: relative;
+        z-index: 2;
+    }
+    .hero-detail {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        margin-top: 22px;
+        color: rgba(255, 255, 255, 0.45);
+        font-size: 9px;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+    .hero-detail span {
+        color: var(--orange);
+    }
+    /* CATEGORIAS */
+    .category {
+        padding: 120px 0;
+        border-bottom: 1px solid var(--line);
+        position: relative;
+    }
+    .category:nth-child(even) {
+        background: var(--cream);
+    }
+    .category::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 5px;
+        height: 100%;
+        background: var(--orange);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+    .category:hover::before {
+        opacity: 1;
+    }
+    .category-header {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 60px;
+        margin-bottom: 55px;
+    }
+    .category-number {
+        color: var(--orange);
+        font-size: 10px;
+        font-weight: 800;
+        letter-spacing: 2px;
+        margin-bottom: 18px;
+    }
+    .category-title {
+        font-family: "Manrope", sans-serif;
+        color: var(--blue);
+        font-size: clamp(38px, 5vw, 65px);
+        line-height: 0.95;
+        letter-spacing: -4px;
+        font-weight: 800;
+    }
+    .category-title em {
+        color: var(--orange);
+        font-family: Georgia, serif;
+        font-style: italic;
+        font-weight: 400;
+        letter-spacing: -3px;
+    }
+    .category-description {
+        max-width: 430px;
+        color: var(--gray);
+        font-size: 13px;
+        line-height: 1.8;
+    }
+    /* GRADE DE FOTOS */
+    .materials-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+    }
+    .materials-grid.four {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .material-card {
+        position: relative;
+        overflow: hidden;
+        background: #ddd;
+        aspect-ratio: 4 / 3;
+    }
+    .material-card::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        pointer-events: none;
+    }
+    .material-card img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+    }
+    .material-card:hover img {
+        transform: scale(1.06);
+    }
+    .material-caption {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 35px 20px 18px;
+        background: linear-gradient(
+            transparent,
+            rgba(1, 50, 93, 0.92)
+        );
+        color: white;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        z-index: 2;
+    }
+    .material-caption::before {
+        content: "";
+        display: block;
+        width: 24px;
+        height: 2px;
+        margin-bottom: 8px;
+        background: var(--orange);
+    }
+    /* DESTAQUES */
+    .category.featured {
+        background: var(--blue);
+    }
+    .featured .category-title {
+        color: white;
+    }
+    .featured .category-description {
+        color: rgba(255, 255, 255, 0.65);
+    }
+    .featured .category-number {
+        color: var(--orange);
+    }
+    .featured .material-card {
+        background: rgba(255, 255, 255, 0.08);
+    }
+    /* CTA */
+    .materials-cta {
+        padding: 150px 0;
+        background: var(--white);
+        position: relative;
+        overflow: hidden;
+    }
+    .materials-cta::after {
+        content: "PB";
+        position: absolute;
+        right: -20px;
+        bottom: -80px;
+        font-family: "Manrope", sans-serif;
+        font-size: 280px;
+        font-weight: 800;
+        letter-spacing: -25px;
+        color: rgba(1, 50, 93, 0.035);
+    }
+    .materials-cta h2 {
+        position: relative;
+        z-index: 2;
+        max-width: 900px;
+        font-family: "Manrope", sans-serif;
+        color: var(--blue);
+        font-size: clamp(48px, 7vw, 90px);
+        line-height: 0.9;
+        letter-spacing: -6px;
+        margin-bottom: 55px;
+    }
+    .materials-cta h2 em {
+        color: var(--orange);
+        font-family: Georgia, serif;
+        font-style: italic;
+        font-weight: 400;
+    }
+    .cta-button {
+        position: relative;
+        z-index: 2;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 17px 25px;
+        background: var(--orange);
+        color: white;
+        font-size: 11px;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: all 0.25s ease;
+    }
+    .cta-button:hover {
+        background: var(--blue);
+        transform: translateY(-3px);
+    }
+    /* FOOTER */
+    .footer {
+        background: var(--blue);
+        color: white;
+    }
+    .footer-inner {
+        min-height: 190px;
+        width: min(1180px, 90%);
+        margin: auto;
+        display: grid;
+        grid-template-columns: 1.5fr 1fr 1fr;
+        align-items: center;
+        gap: 40px;
+    }
+    .footer-logo {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+    .footer-logo .logo-pb {
+        width: 65px;
+        min-width: 65px;
+        font-size: 45px;
+    }
+    .footer-logo .logo-pb .p {
+        color: var(--white);
+    }
+    .footer-logo .logo-pb .b {
+        color: var(--orange);
+    }
+    .footer-logo .logo-text {
+        color: white;
+    }
+    .footer-inner p {
+        color: rgba(255, 255, 255, 0.55);
+        font-size: 10px;
+        max-width: 250px;
+    }
+    .footer-inner > span {
+        color: rgba(255, 255, 255, 0.45);
+        font-size: 9px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    /* SETA PARA O TOPO */
+    .back-to-top {
+        position: fixed;
+        right: 30px;
+        bottom: 30px;
+        z-index: 999;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: var(--orange);
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 22px;
+        font-weight: 400;
+        box-shadow: 0 8px 25px rgba(1, 50, 93, 0.2);
+        transition: all 0.25s ease;
+    }
+    .back-to-top:hover {
+        background: var(--blue);
+        transform: translateY(-5px);
+    }
+    /* TABLET */
+    @media (max-width: 900px) {
+        .materials-grid,
+        .materials-grid.four {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        .category-header {
+            display: block;
+        }
+        .category-description {
+            margin-top: 25px;
+        }
+        .footer-inner {
+            grid-template-columns: 1fr 1fr;
+            padding: 45px 0;
+        }
+    }
+    /* CELULAR */
+    @media (max-width: 600px) {
+        .header {
+            height: 72px;
+        }
+        .header-inner {
+            width: 90%;
+        }
+        .logo {
+            gap: 8px;
+        }
+        .logo-pb {
+            font-size: 30px;
+        }
+        .logo-text {
+            font-size: 7px;
+            letter-spacing: 1.3px;
+        }
+        .back-services {
+            padding: 11px 13px;
+            font-size: 8px;
+            letter-spacing: 0.8px;
+        }
+        .materials-hero {
+            padding: 140px 0 80px;
+            min-height: 550px;
+        }
+        .materials-hero::after {
+            width: 150px;
+            height: 150px;
+            right: -40px;
+            top: 25%;
+        }
+        .materials-hero h1 {
+            font-size: 57px;
+            letter-spacing: -4px;
+        }
+        .materials-hero h1 em {
+            letter-spacing: -3px;
+        }
+        .hero-description {
+            font-size: 14px;
+        }
+        .hero-line {
+            margin-top: 50px;
+        }
+        .category {
+            padding: 85px 0;
+        }
+        .category-header {
+            margin-bottom: 35px;
+        }
+        .category-title {
+            font-size: 43px;
+            letter-spacing: -3px;
+        }
+        .materials-grid,
+        .materials-grid.four {
+            grid-template-columns: 1fr;
+            gap: 14px;
+        }
+        .material-card {
+            aspect-ratio: 4 / 3;
+        }
+        .materials-cta {
+            padding: 100px 0;
+        }
+        .materials-cta h2 {
+            font-size: 54px;
+            letter-spacing: -4px;
+        }
+        .footer-inner {
+            grid-template-columns: 1fr;
+            gap: 25px;
+            padding: 45px 0;
+        }
+        .back-to-top {
+            right: 20px;
+            bottom: 20px;
+            width: 46px;
+            height: 46px;
+            font-size: 20px;
+        }
+    }
+</style>
+</head>
+<body>
+<header class="header">
+<div class="header-inner">
+    <a href="./index.html" class="logo">
+        <span class="logo-pb">
+            <span class="p">P</span><span class="b">B</span>
+        </span>
+        <span class="logo-text">
+            COMUNICAÇÃO<br>
+            VISUAL
+        </span>
+    </a>
+    <a
+        href="./index.html#servicos"
+        class="back-services"
+    >
+        ← Voltar para serviços
+    </a>
+</div>
+</header>
+<main>
+<!-- HERO -->
+<section class="materials-hero">
+    <div class="container">
+        <div class="hero-label">
+            MATERIAIS QUE PRODUZIMOS
+        </div>
+        <h1>
+            Tudo para dar
+            <em>presença à sua marca.</em>
+        </h1>
+        <p class="hero-description">
+            Conheça alguns dos materiais e soluções produzidos pela PB
+            Comunicação Visual para transformar marcas, ambientes e
+            espaços.
+        </p>
+        <div class="hero-line"></div>
+        <div class="hero-detail">
+            <span>PB</span>
+            Comunicação Visual
+            <span>•</span>
+            Pindamonhangaba
+        </div>
+    </div>
+</section>
+<!-- 01 LONA -->
+<section class="category">
+    <div class="container">
+        <div class="category-header">
+            <div>
+                <div class="category-number">01 / LONA</div>
+                <h2 class="category-title">
+                    Faixas <em>&</em> Banners
+                </h2>
+            </div>
+        </div>
+        <div class="materials-grid four">
+            <div class="material-card">
+                <img src="./images/lona-01.png" alt="Lona">
+                <div class="material-caption">Lona</div>
+            </div>
+            <div class="material-card">
+                <img src="./images/lona-02.png" alt="Faixa em lona">
+                <div class="material-caption">Faixas</div>
+            </div>
+            <div class="material-card">
+                <img src="./images/lona-03.png" alt="Banner">
+                <div class="material-caption">Banner</div>
+            </div>
+            <div class="material-card">
+                <img src="./images/lona-04.png" alt="Comunicação visual em lona">
+                <div class="material-caption">Comunicação em lona</div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- 02 ADESIVOS -->
+<section class="category">
+    <div class="container">
+        <div class="category-header">
+            <div>
+                <div class="category-number">02 / ADESIVOS</div>
+                <h2 class="category-title">
+                    Adesivos
+                </h2>
+            </div>
+            <p class="category-description">
+                Soluções adesivas para diferentes superfícies, ambientes
+                e necessidades de comunicação visual.
+            </p>
+        </div>
+        <div class="materials-grid">
+            <div class="material-card">
+                <img src="./images/adesivo-parede.png" alt="Adesivo de parede">
+                <div class="material-caption">Adesivo de parede</div>
+            </div>
+            <div class="material-card">
+                <img src="./images/adesivo-recorte.png" alt="Adesivo de recorte">
+                <div class="material-caption">Adesivo de recorte</div>
+            </div>
+            <div class="material-card">
+                <img src="./images/adesivo-jateado.png" alt="Adesivo jateado">
+                <div class="material-caption">Adesivo jateado</div>
+            </div>
+            <div class="material-card">
+                <img src="./images/adesivo-veiculos.png" alt="Adesivo em veículos">
+                <div class="material-caption">Adesivo em veículos</div>
+            </div>
+            <div class="material-card">
+                <img src="./images/adesivo-perfurado.png" alt="Adesivo perfurado">
+                <div class="material-caption">Adesivo perfurado</div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- 03 PLACAS -->
+<section class="category">
+    <div class="container">
+        <div class="category-header">
+            <div>
+                <div class="category-number">03 / PLACAS</div>
+                <h2 class="category-title">
+                    Placas
+                </h2>
+            </div>
+            <p class="category-description">
+                Diferentes materiais para placas personalizadas, com
+                acabamento profissional e aplicação conforme o projeto.
+            </p>
+        </div>
+        <div class="materials-grid">
+            <div class="material-card">
+                <img src="./images/placa-ps.png" alt="Placa PS">
+                <div class="material-caption">Placa PS</div>
+            </div>
+            <div class="material-card">
+                <img src="./images/placa-acm.png" alt="Placa ACM">
+                <div class="material-caption">Placa ACM</div>
+            </div>
+            <div class="material-card">
+                <img src="./images/placa-acrilico.png" alt="Placa de acrílico">
+                <div class="material-caption">Placa de acrílico</div>
+            </div>
+            <div class="material-card">
+                <img src="./images/placa-aco-galvanizado.png" alt="Placa de aço galvanizado">
+                <div class="material-caption">Aço galvanizado</div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- 04 SINALIZAÇÃO -->
+<section class="category">
+    <div class="container">
+        <div class="category-header">
+            <div>
+                <div class="category-number">04 / SINALIZAÇÃO</div>
+                <h2 class="category-title">
+                    Sinalização
+                </h2>
+            </div>
+            <p class="category-description">
+                Comunicação visual para orientar, identificar e organizar
+                ambientes internos e externos.
+            </p>
+        </div>
+        <div class="materials-grid">
+            <div class="material-card">
+                <img src="./images/sinalizacao-interna.png" alt="Sinalização interna">
+                <div class="material-caption">Sinalização interna</div>
+            </div>
+            <div class="material-card">
+                <img src="./images/sinalizacao-externa.png" alt="Sinalização externa">
+                <div class="material-caption">Sinalização externa</div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- 05 INOX -->
+<section class="category featured">
+    <div class="container">
+        <div class="category-header">
+            <div>
+                <div class="category-number">05 / INOX</div>
+                <h2 class="category-title">
+                    Placas em <em>inox</em>
+                </h2>
+            </div>
+            <p class="category-description">
+                Placas em inox com gravação em UV para uma comunicação
+                sofisticada e durável.
+            </p>
+        </div>
+        <div class="materials-grid four">
+            <div class="material-card">
+                <img src="./images/inox-01.png" alt="Placa em inox gravada em UV">
+            </div>
+            <div class="material-card">
+                <img src="./images/inox-02.png" alt="Placa em inox gravada em UV">
+            </div>
+            <div class="material-card">
+                <img src="./images/inox-03.png" alt="Placa em inox gravada em UV">
+            </div>
+            <div class="material-card">
+                <img src="./images/inox-04.png" alt="Placa em inox gravada em UV">
+            </div>
+        </div>
+    </div>
+</section>
+<!-- 06 LETRAS CAIXA -->
+<section class="category">
+    <div class="container">
+        <div class="category-header">
+            <div>
+                <div class="category-number">06 / LETRAS CAIXA</div>
+                <h2 class="category-title">
+                    Em <em>fachadas</em>
+                </h2>
+            </div>
+            <p class="category-description">
+                Em design gráfico, "letra caixa" refere-se a letras
+                tridimensionais ou em relevo, muitas vezes utilizadas em
+                sinalizações, logotipos e outros elementos visuais.
+                Essas letras são cortadas ou moldadas para criar uma
+                aparência tridimensional.
+            </p>
+        </div>
+        <div class="materials-grid four">
+            <div class="material-card">
+                <img src="./images/letra-caixa-acm.png" alt="Fachada com letra caixa e placa de ACM">
+                <div class="material-caption">Letra caixa + placa de ACM</div>
+            </div>
+            <div class="material-card">
+                <img src="./images/letra-caixa-led.png" alt="Fachada com letra caixa e lâmpadas LED">
+                <div class="material-caption">Letra caixa + lâmpadas LED</div>
+            </div>
+            <div class="material-card">
+                <img src="./images/letra-caixa-clean.png" alt="Fachada clean somente com letra caixa">
+                <div class="material-caption">Fachada clean</div>
+            </div>
+            <div class="material-card">
+                <img src="./images/letra-caixa-backlight.png" alt="Fachada com letra caixa e backlight">
+                <div class="material-caption">Letra caixa + backlight</div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- 07 LETREIROS -->
+<section class="category">
+    <div class="container">
+        <div class="category-header">
+            <div>
+                <div class="category-number">07 / LETREIROS</div>
+                <h2 class="category-title">
+                    Letras caixa
+                </h2>
+            </div>
+        </div>
+        <div class="materials-grid">
+            <div class="material-card">
+                <img src="./images/letras-faixa-01.png" alt="Letras faixa em letreiro">
+            </div>
+            <div class="material-card">
+                <img src="./images/letras-faixa-02.png" alt="Letras faixa em letreiro">
+            </div>
+            <div class="material-card">
+                <img src="./images/letras-faixa-03.png" alt="Letras faixa em letreiro">
+            </div>
+        </div>
+    </div>
+</section>
+<!-- 08 TOTENS / PORTAIS -->
+<section class="category">
+    <div class="container">
+        <div class="category-header">
+            <div>
+                <div class="category-number">08 / TOTENS</div>
+                <h2 class="category-title">
+                    Totens <em>&</em> Portais
+                </h2>
+            </div>
+        </div>
+        <div class="materials-grid">
+            <div class="material-card">
+                <img src="./images/totem-portal-01.png" alt="Totem e portal">
+            </div>
+            <div class="material-card">
+                <img src="./images/totem-portal-02.png" alt="Totem e portal">
+            </div>
+            <div class="material-card">
+                <img src="./images/totem-portal-03.png" alt="Totem e portal">
+            </div>
+        </div>
+    </div>
+</section>
+<!-- 09 LETRAS INTERNAS -->
+<section class="category">
+    <div class="container">
+        <div class="category-header">
+            <div>
+                <div class="category-number">09 / AMBIENTE INTERNO</div>
+                <h2 class="category-title">
+                    Letras caixa
+                </h2>
+            </div>
+            <p class="category-description">
+                Soluções em letras caixa para ambientes internos,
+                combinando identidade visual, iluminação e composição.
+            </p>
+        </div>
+        <div class="materials-grid">
+            <div class="material-card">
+                <img src="./images/letra-interna-iluminada.png" alt="Letra caixa iluminada em ambiente interno">
+                <div class="material-caption">Iluminada</div>
+            </div>
+            <div class="material-card">
+                <img src="./images/letra-interna-jardim.png" alt="Letra caixa com jardim vertical">
+                <div class="material-caption">Jardim vertical + logo</div>
+            </div>
+            <div class="material-card">
+                <img src="./images/letra-interna-clean.png" alt="Letra caixa clean em ambiente interno">
+                <div class="material-caption">Clean</div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- 10 LUMINOSOS -->
+<section class="category">
+    <div class="container">
+        <div class="category-header">
+            <div>
+                <div class="category-number">10 / LUMINOSOS</div>
+                <h2 class="category-title">
+                    Backlight
+                </h2>
+            </div>
+        </div>
+        <div class="materials-grid">
+            <div class="material-card">
+                <img src="./images/backlight-01.png" alt="Luminoso backlight">
+            </div>
+            <div class="material-card">
+                <img src="./images/backlight-02.png" alt="Luminoso backlight">
+            </div>
+            <div class="material-card">
+                <img src="./images/backlight-03.png" alt="Luminoso backlight">
+            </div>
+        </div>
+    </div>
+</section>
+<!-- 11 ACRÍLICO -->
+<section class="category">
+    <div class="container">
+        <div class="category-header">
+            <div>
+                <div class="category-number">11 / ACRÍLICO</div>
+                <h2 class="category-title">
+                    Troféus <em>&</em> Displays
+                </h2>
+            </div>
+        </div>
+        <div class="materials-grid four">
+            <div class="material-card">
+                <img src="./images/acrilico-trofeu.png" alt="Troféu em acrílico">
+                <div class="material-caption">Troféus</div>
+            </div>
+            <div class="material-card">
+                <img src="./images/acrilico-display.png" alt="Display em acrílico">
+                <div class="material-caption">Displays</div>
+            </div>
+            <div class="material-card">
+                <img src="./images/acrilico-medalha.png" alt="Medalha em acrílico">
+                <div class="material-caption">Medalhas</div>
+            </div>
+            <div class="material-card">
+                <img src="./images/acrilico-04.png" alt="Peça personalizada em acrílico">
+                <div class="material-caption">Peças personalizadas</div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- 12 NEON LED -->
+<section class="category featured">
+    <div class="container">
+        <div class="category-header">
+            <div>
+                <div class="category-number">12 / NEON LED</div>
+                <h2 class="category-title">
+                    Neon <em>LED</em>
+                </h2>
+            </div>
+            <p class="category-description">
+                A decoração em Neon LED tem ganhado cada vez mais
+                popularidade, trazendo uma atmosfera vibrante e
+                contemporânea aos espaços. A combinação do brilho
+                característico do neon com a eficiência e versatilidade
+                dos LEDs oferece uma ampla gama de possibilidades para
+                transformar ambientes de maneira única e cativante.
+            </p>
+        </div>
+        <div class="materials-grid">
+            <div class="material-card">
+                <img src="./images/neon-frase.png" alt="Neon LED com frase decorativa">
+                <div class="material-caption">Frases decorativas</div>
+            </div>
+            <div class="material-card">
+                <img src="./images/neon-jardim-logo.png" alt="Neon LED com jardim vertical e logo da empresa">
+                <div class="material-caption">Jardim vertical + logo</div>
+            </div>
+            <div class="material-card">
+                <img src="./images/neon-fachada.png" alt="Neon LED em fachada">
+                <div class="material-caption">Fachada</div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- 13 OUTDOOR -->
+<section class="category">
+    <div class="container">
+        <div class="category-header">
+            <div>
+                <div class="category-number">13 / OUTDOOR</div>
+                <h2 class="category-title">
+                    Outdoor
+                </h2>
+            </div>
+            <p class="category-description">
+                Impressão em papel de outdoor e lona para campanhas,
+                divulgação e comunicação de grande formato.
+            </p>
+        </div>
+        <div class="materials-grid">
+            <div class="material-card">
+                <img src="./images/outdoor-papel.png" alt="Outdoor em papel">
+                <div class="material-caption">Papel de outdoor</div>
+            </div>
+            <div class="material-card">
+                <img src="./images/outdoor-lona-01.png" alt="Outdoor em lona">
+                <div class="material-caption">Outdoor em lona</div>
+            </div>
+           
+        </div>
+    </div>
+</section>
+<!-- 14 TOTENS -->
+<section class="category">
+    <div class="container">
+        <div class="category-header">
+            <div>
+                <div class="category-number">14 / TOTENS</div>
+                <h2 class="category-title">
+                    ACM <em>/</em> K-board <em>/</em> MDF
+                </h2>
+            </div>
+        </div>
+        <div class="materials-grid">
+            <div class="material-card">
+                <img src="./images/totem-acm.png" alt="Totem em ACM">
+                <div class="material-caption">Totem em ACM</div>
+            </div>
+            <div class="material-card">
+                <img src="./images/totem-kboard-mdf.png" alt="Totem em K-board e MDF">
+                <div class="material-caption">K-board / MDF</div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- 15 PAINEL PANTOGRÁFICO -->
+<section class="category featured">
+    <div class="container">
+        <div class="category-header">
+            <div>
+                <div class="category-number">15 / EVENTOS</div>
+                <h2 class="category-title">
+                    Painel pantográfico
+                    <em>& Backdrop</em>
+                </h2>
+            </div>
+            <p class="category-description">
+                São peças indispensáveis para expor sua marca ou produto
+                em eventos e ambientes mais sofisticados, pois são
+                painéis dinâmicos, práticos, totalmente portáteis e muito
+                simples de configurar.
+            </p>
+        </div>
+        <div class="materials-grid">
+            <div class="material-card">
+                <img
+                    src="./images/painel-pantografico-backdrop.png"
+                    alt="Painel pantográfico e backdrop"
+                >
+            </div>
+        </div>
+    </div>
+</section>
+<!-- CTA -->
+<section class="materials-cta">
+    <div class="container">
+        <h2>
+            Sua ideia pode virar
+            <em>presença.</em>
+        </h2>
+        <a
+            href="https://wa.me/551236485037?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20com%20a%20PB%20Visual."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="cta-button"
+        >
+            Solicitar orçamento →
+        </a>
+    </div>
+</section>
+</main>
+<!-- FOOTER -->
+<footer class="footer">
+<div class="footer-inner">
+    <div class="footer-logo">
+        <span class="logo-pb">
+            <span class="p">P</span><span class="b">B</span>
+        </span>
+        <span class="logo-text">
+            COMUNICAÇÃO<br>
+            VISUAL
+        </span>
+    </div>
+    <p>
+        Perez e Bergonzoni Comércio e Comunicação Visual
+    </p>
+    <span>
+        © 2026 PB Comunicação Visual
+    </span>
+</div>
+</footer>
+<!-- SETA PARA O TOPO -->
+
+<a
+href=”#top”
+class=“back-to-top”
+aria-label=“Voltar ao topo”
+
+↑
+</a>
+<script>
+    document.querySelector(".back-to-top").addEventListener("click", function (event) {
+        event.preventDefault();
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+</script>
+</body>
+</html>
